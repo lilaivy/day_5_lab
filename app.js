@@ -84,13 +84,13 @@ var testArray = [2,3,4]; //eslint-disable-line
 
 
 function sumArray(testArray){ //eslint-disable-line
-var total = 0;
+  var total = 0;
   for(var i = 0; i < testArray.length; i++){  //for loop code
 
     total = sum(total,testArray[i])[0];
   }
    
-    var arrayMessage = testArray + ' was passed in as an array of numbers, and ' + total + ' is their sum.';
+  var arrayMessage = testArray + ' was passed in as an array of numbers, and ' + total + ' is their sum.';
 
   return[total, arrayMessage];
 }
@@ -129,10 +129,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
+  var total = 0;
 
- }
+
+  total = multiply(multiply(testArray[0], testArray[1])[0], testArray[2])[0];
+
+  console.log(total); 
+
+  var arrayMessage = 'The numbers ' + testArray + ' have a product of ' + total + '.';
+
+  return[total, arrayMessage];
+}
+
+
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
